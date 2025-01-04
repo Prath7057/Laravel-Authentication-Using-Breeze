@@ -5,7 +5,7 @@ use App\Http\Controllers\SuperAdmin\ProfileController;
 use App\Http\Controllers\Auth\PasswordController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('SuperAdmin')->name('SuperAdmin')->group(function () {
+Route::prefix('SuperAdmin')->name('SuperAdmin.')->group(function () {
 
     Route::middleware('guest')->group(function () {
 
