@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('Admin')->name('Admin.')->group(function () {
 
-    Route::middleware('guest')->group(function () {
+    Route::middleware('guest:admin')->group(function () {
 
         Route::get('login', [AuthenticatedSessionController::class, 'create'])
             ->name('login');
