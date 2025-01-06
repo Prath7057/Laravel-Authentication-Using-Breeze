@@ -19,3 +19,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 require __DIR__.'/superadminauth.php';
+require __DIR__.'/adminauth.php';
