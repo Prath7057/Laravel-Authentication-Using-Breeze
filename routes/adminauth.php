@@ -15,7 +15,7 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
         Route::post('login', [AuthenticatedSessionController::class, 'store']);
     });
 
-    Route::middleware('auth:super_admin')->group(function () {
+    Route::middleware('auth:admin')->group(function () {
 
         Route::get('/dashboard', function () {
             return view('Admin.dashboard');
