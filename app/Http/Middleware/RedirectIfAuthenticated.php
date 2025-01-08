@@ -23,6 +23,8 @@ class RedirectIfAuthenticated
             if (Auth::guard($guard)->check()) {
                 if ($guard == 'super_admin' && Route::is('SuperAdmin.*')) {
                     return redirect()->route('SuperAdmin.dashboard');
+                } else if ($guard == 'admin' && Route::is('Admin.*')) {
+                    return redirect()->route('Admin.dashboard');
                 } else {
                     return redirect()->route('dashboard');
                 }

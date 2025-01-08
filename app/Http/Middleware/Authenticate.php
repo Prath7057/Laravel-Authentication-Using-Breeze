@@ -40,7 +40,11 @@ class Authenticate
         if (Route::is('SuperAdmin.*')) {
             return route('SuperAdmin.login');
         }
-            
+          
+        if (Route::is('Admin.*')) {
+            return route('Admin.login');
+        }
+
         return route('login');
 
     }
